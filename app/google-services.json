@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "127382226858",
+    "project_id": "ejemplo-firebase-73310",
+    "storage_bucket": "ejemplo-firebase-73310.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127382226858:android:e5230628b39e727b2f8dd3",
+        "android_client_info": {
+          "package_name": "es.iesoretania.ejemplofirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127382226858-fosqns4ifuapi1r33745vp0k9fcli9o0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd-7VgzSRvtWX1e9cn4pqZHti7DppOok0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "127382226858-fosqns4ifuapi1r33745vp0k9fcli9o0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
