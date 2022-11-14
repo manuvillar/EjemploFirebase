@@ -59,7 +59,8 @@ public class HomeActivity extends AppCompatActivity {
                 usuario.put("cp", Integer.parseInt(binding.EditTextCP.getText().toString()));
 
                 //Los guardamos en la base de datos.
-                db.collection("usuarios").document(mail).set(usuario);
+                db.collection("usuarios").
+                        document(binding.EditTextEmailHome.getText().toString()).set(usuario);
                 Toast.makeText(HomeActivity.this, "Registro guardado correctamente", Toast.LENGTH_SHORT).show();
             }
         });
