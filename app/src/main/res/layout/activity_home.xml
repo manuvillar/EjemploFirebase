@@ -22,36 +22,90 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.089999974">
-    <TextView
-        android:id="@+id/TextViewEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Email"
-        android:textSize="18sp" />
+            <EditText
+                android:id="@+id/EditTextEmailHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:textSize="18sp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="8dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
 
-    <TextView
-        android:id="@+id/TextViewProveedor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Contraseña"
-        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/TextViewProveedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Proveedor"
+                android:textSize="18sp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="8dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
 
-         <Button
-            android:id="@+id/botonCerrar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="CERRAR SESIÓN" />
+            <EditText
+                android:id="@+id/EditTextCiudad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Ciudad"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <EditText
+                android:id="@+id/EditTextCP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Código Postal"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <Button
+                android:id="@+id/botonGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GUARDAR" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <Button
+                android:id="@+id/botonRecuperar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="RECUPERAR" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <Button
+                android:id="@+id/botonEliminar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ELIMINAR" />
+             <Button
+                android:id="@+id/botonCerrar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="CERRAR SESIÓN" />
 </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

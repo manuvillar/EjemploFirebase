@@ -13,15 +13,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import es.iesoretania.ejemplofirebase.databinding.ActivityMainBinding;
+import es.iesoretania.ejemplofirebase.databinding.ActivityLoginBinding;
 
-public class MainActivity extends AppCompatActivity {
-    private ActivityMainBinding binding;
+public class LoginActivity extends AppCompatActivity {
+    private ActivityLoginBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding=ActivityMainBinding.inflate(getLayoutInflater());
+        binding=ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setTitle("Pantalla de Autenticación");
@@ -29,17 +29,17 @@ public class MainActivity extends AppCompatActivity {
         binding.botonRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!binding.EditTextEmail.getText().toString().isEmpty()
+                if (!binding.EditTextEmailLogin.getText().toString().isEmpty()
                         && !binding.EditTextPassword.getText().toString().isEmpty()){
                     FirebaseAuth.getInstance()
-                            .createUserWithEmailAndPassword(binding.EditTextEmail.getText().toString(),
+                            .createUserWithEmailAndPassword(binding.EditTextEmailLogin.getText().toString(),
                                     binding.EditTextPassword.getText().toString())
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()){
                                         Intent intentHome = new Intent(view.getContext(), HomeActivity.class);
-                                        intentHome.putExtra("email", binding.EditTextEmail.getText().toString());
+                                        intentHome.putExtra("email", binding.EditTextEmailLogin.getText().toString());
                                         intentHome.putExtra("proveedor", "EMAIL-PASSWORD");
 
                                         startActivity(intentHome);
@@ -57,17 +57,17 @@ public class MainActivity extends AppCompatActivity {
         binding.botonAcceder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!binding.EditTextEmail.getText().toString().isEmpty()
+                if (!binding.EditTextEmailLogin.getText().toString().isEmpty()
                         && !binding.EditTextPassword.getText().toString().isEmpty()){
                     FirebaseAuth.getInstance()
-                            .signInWithEmailAndPassword(binding.EditTextEmail.getText().toString(),
+                            .signInWithEmailAndPassword(binding.EditTextEmailLogin.getText().toString(),
                                     binding.EditTextPassword.getText().toString())
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()){
                                         Intent intentHome = new Intent(view.getContext(), HomeActivity.class);
-                                        intentHome.putExtra("email", binding.EditTextEmail.getText().toString());
+                                        intentHome.putExtra("email", binding.EditTextEmailLogin.getText().toString());
                                         intentHome.putExtra("proveedor", "EMAIL-PASSWORD");
 
                                         startActivity(intentHome);
